@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cc.dividebyzero.owlninja">
+    <uses-sdk android:minSdkVersion="17"/>
+    <permission android:name="cc.dividebyzero.owlninja.READ_HISTORY"
+                android:label="READ_URL_HISTORY"
+                android:description="@string/perm_desc_read_history"
+                />
+
+    <permission android:name="cc.dividebyzero.owlninja.WRITE_HISTORY"
+                android:label="WRITE_URL_HISTORY"
+                android:description="@string/perm_desc_write_history"
+            />
+
+
+    <uses-permission android:name="cc.dividebyzero.owlninja.READ_HISTORY"/>
+    <uses-permission android:name="cc.dividebyzero.owlninja.WRITE_HISTORY"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+
+
+
+        <provider android:authorities="owlninja"
+                  android:name=".provider.HistoryProvider"
+                  android:exported="true"
+                  android:readPermission="cc.dividebyzero.owlninja.READ_HISTORY"
+                  android:writePermission="cc.dividebyzero.owlninja.WRITE_HISTORY"
+                  />
+
+        <activity android:name=".history.HistoryAcv">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

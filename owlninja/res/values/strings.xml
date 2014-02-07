@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OwlNinja</string>
+    <string name="perm_desc_read_history">Can read all saved URLs</string>
+    <string name="perm_desc_write_history">Can create, modify and delete URL history</string>
+</resources>
